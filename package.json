@@ -1,0 +1,40 @@
+{
+  "name": "nexus-402",
+  "version": "1.0.0",
+  "description": "The Universal x402 Orchestration Protocol & Agent Marketplace for Cronos",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "contracts"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "deploy:contracts": "cd contracts && npx hardhat run scripts/deploy.ts --network cronos-testnet",
+    "start:backend": "cd apps/backend && npm run start",
+    "start:frontend": "cd apps/frontend && npm run dev",
+    "start:all": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "x402",
+    "cronos",
+    "ai-agents",
+    "defi",
+    "payments",
+    "blockchain",
+    "crypto.com"
+  ],
+  "author": "NEXUS-402 Team",
+  "license": "MIT"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@nexus-402/mcp-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for NEXUS-402 - Enables AI assistants to interact with the protocol",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "nexus-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "@nexus-402/sdk": "workspace:*",
+    "ethers": "^6.9.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "files": ["dist"],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nexus-402",
+    "x402",
+    "cronos",
+    "ai-agents",
+    "crypto-payments"
+  ],
+  "license": "MIT"
+}
